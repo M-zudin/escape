@@ -3,7 +3,7 @@ from hashlib import sha256
 from time import sleep
 no_fall=None
 hasher=sha256()
-cheat='5126' #2183 отключение падения 5126 - клик тп
+cheat='5126' #2183 отключение падения 5126 - клик телепорт
 hasher.update(cheat.encode('utf-8'))
 if hasher.hexdigest()=='bc83cbb2d6dcba934deedb695609dd3ae689a72b210a8f1b86f6b1bc4c68d348':
     no_fall=1
