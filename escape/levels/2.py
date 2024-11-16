@@ -28,7 +28,7 @@ while True:
                 if xc==30 and c>25:
                     c/=2
             if i.key == pygame.K_w:
-                if yc==475 or yc==474:
+                if yc==475 or yc==476:
                     for x in range(0,25):
                         yc-=4
                         sleep(0.01)
@@ -57,11 +57,14 @@ while True:
                             pygame.draw.rect(screen, r, [xp, 500, 100, 50], 5)
                             pygame.draw.rect(screen, g, [750, 495, 100, 5], 5)
                             pygame.draw.circle(screen, white, (xc, yc), c)
+                            pygame.draw.rect(screen, white, [10, 0, 10, 10])
+                            pygame.draw.rect(screen, white, [20, 10, 10, 10])
+                            pygame.draw.rect(screen, white, [0, 20, 30, 10])
                             pygame.display.update()
                                                     
     if ((xc>200 and xc<700) and (xc<xp or xc>xp+100)) and yc>=475 or yc<475 and no_fall==0:
             yc+=2
-    if yc>475:
+    if yc>476:
         yc+=2
     if yc>600:
         xc=100
@@ -74,4 +77,7 @@ while True:
     pygame.draw.rect(screen, r, [xp, 500, 100, 50], 5)
     pygame.draw.rect(screen, g, [750, 495, 100, 5], 5)
     pygame.draw.circle(screen, white, (xc, yc), c)
+    pygame.draw.rect(screen, white, [10, 0, 10, 10])
+    pygame.draw.rect(screen, white, [20, 10, 10, 10])
+    pygame.draw.rect(screen, white, [0, 20, 30, 10])
     pygame.display.update()
