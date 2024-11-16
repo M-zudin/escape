@@ -45,6 +45,8 @@ while True:
                             pygame.display.update()                                                    
     if xc>400 and xc<500 and yc>=475 or yc<475 and no_fall==0:
         yc+=2
+    if yc>475:
+        yc+=2
     if yc>600:
         xc=100
         yc=475

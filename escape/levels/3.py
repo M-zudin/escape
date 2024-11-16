@@ -62,13 +62,13 @@ while True:
                                                     
     if ((xc>200 and xc<700) and (xc<xp or xc>xp+100)) and yc>=475 or yc<475 and no_fall==0:
         yc+=2
+    if yc>475:
+        yc+=2
     if yc>600 or (xc>=750 and xc<=800 and yc==475) or (xc>=750 and xc<=800 and yc==425):
         xc=100
         yc=475
     if xc>850 and xc<950 and yc>470:
         break
-    if yc==474 or yc==473:
-        yc=475
     screen.fill(black)
     pygame.draw.rect(screen, r, [-100, 500, 300, 200], 5)
     pygame.draw.rect(screen, r, [700, 500, 400, 200], 5)

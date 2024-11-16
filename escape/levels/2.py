@@ -61,6 +61,8 @@ while True:
                                                     
     if ((xc>200 and xc<700) and (xc<xp or xc>xp+100)) and yc>=475 or yc<475 and no_fall==0:
             yc+=2
+    if yc>475:
+        yc+=2
     if yc>600:
         xc=100
         yc=475
