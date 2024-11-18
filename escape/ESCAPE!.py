@@ -1,3 +1,7 @@
+a=open('data.dat')
+f=a.readline()
+if f.lower()=='use 2-alt level instead of 2: true':
+    use_2_alt=True
 import pygame
 from hashlib import sha256
 from time import sleep
@@ -33,5 +37,8 @@ def start_level(num):
     a.close()
     exec(lvl_data)
 start_level(1)
-start_level(2)
+if use_2_alt==True:
+    start_level('2-alt')
+else:
+    start_level(2)
 start_level(3)
