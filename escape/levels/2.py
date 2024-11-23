@@ -27,6 +27,8 @@ while True:
                     xc-=10
                 if xc==30 and c>25:
                     c/=2
+                if i.key == pygame.K_ESCAPE:
+                    menu()
             if i.key == pygame.K_w:
                 if yc==475 or yc==476:
                     for x in range(0,25):
@@ -48,6 +50,8 @@ while True:
                                 if i.key == pygame.K_a:
                                     if xc>30 and yc<485:
                                         xc-=10
+                                if i.key == pygame.K_ESCAPE:
+                                    menu()
                             if yc>600:
                                 xc=100
                                 yc=475

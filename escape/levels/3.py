@@ -27,6 +27,8 @@ while True:
                     xc-=10
                 if xc==30 and c>25:
                     c/=2
+            if i.key == pygame.K_ESCAPE:
+                menu()
             if i.key == pygame.K_w:
                 if yc==475 or yc==476:
                     for x in range(0,25):
@@ -48,6 +50,8 @@ while True:
                                 if i.key == pygame.K_a:
                                     if xc>30 and yc<485:
                                         xc-=10
+                                if i.key == pygame.K_ESCAPE:
+                                    menu()
                             if yc>600:
                                 xc=100
                                 yc=475
@@ -62,12 +66,13 @@ while True:
                             pygame.draw.rect(screen, white, [20, 10, 10, 10])
                             pygame.draw.rect(screen, white, [0, 20, 30, 10])
                             pygame.display.update()
+            
                                                     
     if ((xc>200 and xc<700) and (xc<xp or xc>xp+100)) and yc>=475 or yc<475 and no_fall==0:
         yc+=2
     if yc>476:
         yc+=2
-    if yc>600 or (xc>=750 and xc<=800 and yc==475) or (xc>=750 and xc<=800 and yc==425):
+    if yc>600 or (xc>=750 and xc<=800 and yc==475) or (xc>=750 and xc<=800 and yc==425) or xc>740 and xc<790 and yc>430 and yc<460:
         xc=100
         yc=475
     if xc>850 and xc<950 and yc>470:
